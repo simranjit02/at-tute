@@ -11,9 +11,16 @@
       data-sap-ui-resourceroots='{
             "atdev": "./"
         }'
-      data-sap-ui-onInit="module:my.app.Component"
-      data-sap-ui-async="true"
     ></script>
+    <script>
+      var oBtn = new sap.m.Button("firstBtn", {
+        text: "click me",
+        press: function () {
+          alert("wow");
+        },
+      });
+      oBtn.placeAt("content");
+    </script>
   </head>
   <body class="sapUiBody" id="content">
     welcome
