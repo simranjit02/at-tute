@@ -13,32 +13,14 @@
         }'
     ></script>
     <script>
-      var oInput = new sap.m.Input("idInput");
-      oInput.placeAt("inpu");
-      var oBtn = new sap.m.Button("firstBtn", {
-        text: "click me",
-        // press: function () {
-        //   var val = sap.ui.getCore().byId("idInput").getValue();
-        //   alert(val);
-        // },
+      var oView = new sap.ui.view({
+        viewName: "atdev.view.Main",
+        type: "JS",
       });
-      oBtn.placeAt("idBtn");
-      var attachBtn = new sap.m.Button("attBtn", {
-        text: "Attached",
-        press: function () {
-          var nBtn = sap.ui.getCore().byId("firstBtn");
-          nBtn.attachPress(function () {
-            alert(sap.ui.getCore().byId("idInput").getValue());
-          });
-        },
-      });
-      attachBtn.placeAt("attButton");
+      oView.placeAt("content");
     </script>
   </head>
   <body class="sapUiBody" id="content">
-    <div id="inpu"></div>
-    <div id="idBtn"></div>
-    <div id="attButton"></div>
     welcome
   </body>
 </html>
