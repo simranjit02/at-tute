@@ -1,0 +1,9 @@
+<mvc:View controllerName="atdev.controller.EmpDetails"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Input placeholder="Employee ID" id="empId"/>
+    <Input placeholder="Employee Name" id="empName"/>
+    <Input placeholder="Employee Salary" id="empSalary"/>
+    <Input placeholder="Employee Currency" id="empCurrency"/>
+    <Button text="Add Details" press="addDetails" />
+</mvc:View>

@@ -25,10 +25,17 @@
         id: "viewTwo",
       });
       oViewXml.placeAt("elm2");
+      var oEmpView = new sap.ui.view({
+        viewName: "atdev.view.EmpDetails",
+        type: "XML",
+        id: "empView",
+      });
+      oEmpView.placeAt("elm3");
     </script>
   </head>
   <body class="sapUiBody" id="content">
     <div id="elm1"></div>
     <div id="elm2"></div>
+    <div id="elm3"></div>
   </body>
 </html>
