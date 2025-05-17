@@ -1,9 +1,29 @@
 <mvc:View controllerName="atdev.controller.EmpDetails"
     xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
-    <Input placeholder="Employee ID" id="empId"/>
+    <!-- <Input placeholder="Employee ID" id="empId"/>
     <Input placeholder="Employee Name" id="empName"/>
     <Input placeholder="Employee Salary" id="empSalary"/>
     <Input placeholder="Employee Currency" id="empCurrency"/>
-    <Button text="Add Details" press="addDetails" />
+    <Button text="Add Details" press="addDetails" /> -->
+    <f:SimpleForm editable="true">
+        <f:title >
+            <core:Title tooltip="hi" text="Employee Data" icon="sap-icon://customer"/>
+        </f:title >
+        <f:content>
+            <Label text="Employee ID" />
+            <Input id="empId" width="50%" />
+            <Label text="Employee Name" />
+            <Input id="empName" width="50%" />
+            <Label text="Employee Salary" />
+            <Input id="empSalary" width="50%" />
+            <Label text="Employee Currency" />
+            <Input id="empCurrency" width="50%" />
+            <Label />
+
+            <Button text="Add Details" press="addDetails" width="50%"/>
+        </f:content>
+    </f:SimpleForm>
 </mvc:View>

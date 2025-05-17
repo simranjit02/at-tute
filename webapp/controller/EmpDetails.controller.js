@@ -7,10 +7,14 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
         empSalary: "8000",
         empCurrency: "EUR",
       };
-      this.getView().byId("empId").setValue(empData.empId);
-      this.getView().byId("empName").setValue(empData.empName);
-      this.getView().byId("empSalary").setValue(empData.empSalary);
-      this.getView().byId("empCurrency").setValue(empData.empCurrency);
+      const oView = this.getView();
+
+      Object.entries(empData).forEach(([key, value]) => {
+        const field = oView.byId(key);
+        if (field) {
+          field.setValue(value);
+        }
+      });
     },
   });
 });
