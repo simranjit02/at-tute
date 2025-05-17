@@ -16,11 +16,19 @@
       var oView = new sap.ui.view({
         viewName: "atdev.view.Main",
         type: "JS",
+        id: "viewOne",
       });
-      oView.placeAt("content");
+      oView.placeAt("elm1");
+      var oViewXml = new sap.ui.view({
+        viewName: "atdev.view.My",
+        type: "XML",
+        id: "viewTwo",
+      });
+      oViewXml.placeAt("elm2");
     </script>
   </head>
   <body class="sapUiBody" id="content">
-    welcome
+    <div id="elm1"></div>
+    <div id="elm2"></div>
   </body>
 </html>

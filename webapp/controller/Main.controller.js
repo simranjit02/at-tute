@@ -6,5 +6,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
         alert(sap.ui.getCore().byId("idInput").getValue());
       });
     },
+
+    getAlert: function () {
+      var textMsg = this.getView().byId("idInputXML2").getValue();
+      alert(textMsg);
+    },
   });
 });

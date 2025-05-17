@@ -1,0 +1,6 @@
+<mvc:View controllerName="atdev.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Input id="idInputXML2" />
+    <Button id="idBtnXML2" press="getAlert" text="click me"/>
+</mvc:View>
