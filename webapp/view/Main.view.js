@@ -2,7 +2,7 @@ sap.ui.jsview("atdev.view.Main", {
   getControllerName: function () {
     return "atdev.controller.Main";
   },
-  createContent: function () {
+  createContent: function (oController) {
     var oInput = new sap.m.Input("idInput");
     // oInput.placeAt("inpu");
     var oBtn = new sap.m.Button("firstBtn", {
@@ -15,12 +15,7 @@ sap.ui.jsview("atdev.view.Main", {
     // oBtn.placeAt("idBtn");
     var attachBtn = new sap.m.Button("attBtn", {
       text: "Attached",
-      press: function () {
-        var nBtn = sap.ui.getCore().byId("firstBtn");
-        nBtn.attachPress(function () {
-          alert(sap.ui.getCore().byId("idInput").getValue());
-        });
-      },
+      press: oController.onPress,
     });
     // attachBtn.placeAt("attButton");
     return [oInput, oBtn, attachBtn];
