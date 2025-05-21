@@ -14,15 +14,14 @@
         </f:title >
         <f:content>
             <Label text="Employee ID" />
-            <Input id="empId" width="50%" />
+            <Input id="empId" width="50%" value="{empData>/empStr/empId}"/>
             <Label text="Employee Name" />
-            <Input id="empName" width="50%" />
+            <Input id="empName" width="50%" value="{empData>/empStr/empName}"/>
             <Label text="Employee Salary" />
-            <Input id="empSalary" width="50%" />
+            <Input id="empSalary" width="50%" value="{empData>/empStr/salary}"/>
             <Label text="Employee Currency" />
-            <Input id="empCurrency" width="50%" />
+            <Input id="empCurrency" width="50%" value="{empData>/empStr/currency}"/>
             <Label />
-
             <Button text="Add Details" press="addDetails" width="50%"/>
         </f:content>
     </f:SimpleForm>

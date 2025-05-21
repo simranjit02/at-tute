@@ -1,0 +1,70 @@
+{
+    "empStr": {
+        "empId": "45SEGEDF4544",
+        "empName": "Simranjit Singh",
+        "salary": 6500,
+        "currency": "EUR"
+    },
+    "empTab": [
+        {
+            "empId": 9000,
+            "empName": "Anaya",
+            "salary": 5580,
+            "currency": "USD"
+        },
+        {
+            "empId": 9001,
+            "empName": "Alex",
+            "salary": 7480,
+            "currency": "EUR"
+        },
+        {
+            "empId": 9002,
+            "empName": "Simranjit",
+            "salary": 8200,
+            "currency": "EUR"
+        },
+        {
+            "empId": 9003,
+            "empName": "Harleen",
+            "salary": 6800,
+            "currency": "USD"
+        },
+        {
+            "empId": 9004,
+            "empName": "Carlos",
+            "salary": 7100,
+            "currency": "EUR"
+        },
+        {
+            "empId": 9005,
+            "empName": "Mira",
+            "salary": 6300,
+            "currency": "GBP"
+        },
+        {
+            "empId": 9006,
+            "empName": "Ravi",
+            "salary": 7700,
+            "currency": "INR"
+        },
+        {
+            "empId": 9007,
+            "empName": "Fatima",
+            "salary": 6950,
+            "currency": "USD"
+        },
+        {
+            "empId": 9008,
+            "empName": "Leo",
+            "salary": 8800,
+            "currency": "EUR"
+        },
+        {
+            "empId": 9009,
+            "empName": "Amrita",
+            "salary": 7150,
+            "currency": "CAD"
+        }
+    ]
+}
