@@ -23,6 +23,7 @@
             <Input id="empCurrency" width="50%" value="{empData>/empStr/currency}"/>
             <Label />
             <Button text="Add Details" press="addDetails" width="50%"/>
+            <Button text="Save" press="saveDetails" width="50%"/>
         </f:content>
     </f:SimpleForm>
 </mvc:View>
