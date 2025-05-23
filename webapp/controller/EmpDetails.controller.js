@@ -2,10 +2,11 @@ sap.ui.define(
   ["sap/ui/core/mvc/Controller", "atdev/model/models"],
   function (Controller, models) {
     return Controller.extend("atdev.controller.EmpDetails", {
-      addDetails: function () {
+      onInit: function () {
         var oModel = models.createJSONModel("model/mockData/employee.json");
         sap.ui.getCore().setModel(oModel, "empData");
       },
+      addDetails: function () {},
       saveDetails: function () {
         var oModel = sap.ui.getCore().getModel("empData");
         // var oProp = oModel.getProperty("/empStr/empName");
