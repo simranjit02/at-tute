@@ -2,6 +2,7 @@
     xmlns="sap.m"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
     xmlns:mvc="sap.ui.core.mvc">
     <!-- <Input placeholder="Employee ID" id="empId"/>
     <Input placeholder="Employee Name" id="empName"/>
@@ -16,7 +17,7 @@
             <Label text="Employee ID" />
             <Input id="empId" width="50%" value="{empData>/empStr/empId}"/>
             <Label text="Employee Name" />
-            <Input id="empName" width="50%" value="{empData>/empStr/empName}"/>
+            <Input id="empName" width="50%" editable="{= ${empData>/empStr/empName} === 'Simranjit Singh' ? false : true }" value="{empData>/empStr/empName}"/>
             <Label text="Employee Salary" />
             <Input id="empSalary" width="50%" value="{empData>/empStr/salary}"/>
             <Label text="Employee Currency" />
@@ -25,5 +26,42 @@
             <Button text="Add Details" press="addDetails" width="50%"/>
             <Button text="Save" press="saveDetails" width="50%"/>
         </f:content>
+
     </f:SimpleForm>
+    <t:Table rows="{empData>/empTab}" visibleRowCount="10" selectionMode="None" width="100%">
+        <t:columns>
+            <t:Column >
+                <t:label>
+                    <Label text="Employee ID"/>
+                </t:label>
+                <t:template>
+                    <Text text="{empData>empId}"/>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Name"/>
+                </t:label>
+                <t:template>
+                    <Text text="{empData>empName}"/>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Salary"/>
+                </t:label>
+                <t:template>
+                    <Text text="{= ${empData>salary} + ' ' + ${empData>currency} }" />
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Currency"/>
+                </t:label>
+                <t:template>
+                    <Text text="{empData>currency}"/>
+                </t:template>
+            </t:Column>
+        </t:columns>
+    </t:Table>
 </mvc:View>
