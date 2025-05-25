@@ -1,70 +1,114 @@
 {
     "empStr": {
-        "empId": "45SEGEDF4544",
+        "empId": 5000,
         "empName": "Simranjit Singh",
         "salary": 6500,
-        "currency": "EUR"
+        "currency": "EUR",
+        "gender": "Male",
+        "isSmoker": false,
+        "married": true,
+        "rating": 4.3
     },
     "empTab": [
         {
             "empId": 9000,
             "empName": "Anaya",
             "salary": 5580,
-            "currency": "USD"
+            "currency": "USD",
+            "gender": "Female",
+            "isSmoker": false,
+            "married": false,
+            "rating": 4.7
         },
         {
             "empId": 9001,
             "empName": "Alex",
             "salary": 7480,
-            "currency": "EUR"
+            "currency": "EUR",
+            "gender": "Male",
+            "isSmoker": true,
+            "married": true,
+            "rating": 3.9
         },
         {
             "empId": 9002,
             "empName": "Simranjit",
             "salary": 8200,
-            "currency": "EUR"
+            "currency": "EUR",
+            "gender": "Male",
+            "isSmoker": false,
+            "married": true,
+            "rating": 4.8
         },
         {
             "empId": 9003,
             "empName": "Harleen",
             "salary": 6800,
-            "currency": "USD"
+            "currency": "USD",
+            "gender": "Female",
+            "isSmoker": false,
+            "married": false,
+            "rating": 4.1
         },
         {
             "empId": 9004,
             "empName": "Carlos",
             "salary": 7100,
-            "currency": "EUR"
+            "currency": "EUR",
+            "gender": "Male",
+            "isSmoker": true,
+            "married": false,
+            "rating": 3.5
         },
         {
             "empId": 9005,
             "empName": "Mira",
             "salary": 6300,
-            "currency": "GBP"
+            "currency": "GBP",
+            "gender": "Female",
+            "isSmoker": false,
+            "married": true,
+            "rating": 4.6
         },
         {
             "empId": 9006,
             "empName": "Ravi",
             "salary": 7700,
-            "currency": "INR"
+            "currency": "INR",
+            "gender": "Male",
+            "isSmoker": false,
+            "married": true,
+            "rating": 4.0
         },
         {
             "empId": 9007,
             "empName": "Fatima",
             "salary": 6950,
-            "currency": "USD"
+            "currency": "USD",
+            "gender": "Female",
+            "isSmoker": false,
+            "married": true,
+            "rating": 4.9
         },
         {
             "empId": 9008,
             "empName": "Leo",
             "salary": 8800,
-            "currency": "EUR"
+            "currency": "EUR",
+            "gender": "Male",
+            "isSmoker": true,
+            "married": false,
+            "rating": 3.8
         },
         {
             "empId": 9009,
             "empName": "Amrita",
             "salary": 7150,
-            "currency": "CAD"
+            "currency": "CAD",
+            "gender": "Female",
+            "isSmoker": false,
+            "married": true,
+            "rating": 4.4
         }
     ]
 }

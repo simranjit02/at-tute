@@ -43,7 +43,7 @@
                     <Label text="Name"/>
                 </t:label>
                 <t:template>
-                    <Text text="{empData>empName}"/>
+                    <Input value="{empData>empName}"/>
                 </t:template>
             </t:Column>
             <t:Column >
@@ -56,12 +56,38 @@
             </t:Column>
             <t:Column >
                 <t:label>
-                    <Label text="Currency"/>
+                    <Label text="Gender"/>
                 </t:label>
                 <t:template>
-                    <Text text="{empData>currency}"/>
+                    <Image src="{= ${empData>gender} === 'Male' ? 'https://i.pinimg.com/474x/0a/52/d5/0a52d5e52f7b81f96538d6b16ed5dc2b.jpg' : 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png' }" height="32px" width="32px" />
+
+
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Smoker?"/>
+                </t:label>
+                <t:template>
+                    <Image src="{= ${empData>isSmoker} ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Smoking_Symbol.svg/2048px-Smoking_Symbol.svg.png' : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/No_Smoking.svg/2048px-No_Smoking.svg.png'}" height="32px" width="32px" />
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Marital Status"/>
+                </t:label>
+                <t:template>
+                    <Text text="{= ${empData>married} ? 'Married' : 'Unmarried'}"/>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Rating"/>
+                </t:label>
+                <t:template>
+                    <RatingIndicator editable="true" maxValue="5" class="sapUiSmallMarginBottom" value="{empData>rating}" />
                 </t:template>
             </t:Column>
         </t:columns>
     </t:Table>
-</mvc:View>
+</mvc:View> 
