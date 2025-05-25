@@ -77,7 +77,12 @@
                     <Label text="Marital Status"/>
                 </t:label>
                 <t:template>
-                    <Text text="{= ${empData>married} ? 'Married' : 'Unmarried'}"/>
+                    <Select selectedKey="{empData>married}">
+                        <items>
+                            <core:Item text="Married" key="true"/>
+                            <core:Item text="Unmarried" key="false"/>
+                        </items>
+                    </Select>
                 </t:template>
             </t:Column>
             <t:Column >
