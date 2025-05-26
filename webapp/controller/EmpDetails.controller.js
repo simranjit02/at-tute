@@ -13,7 +13,15 @@ sap.ui.define(
         // console.log("oProp", oProp);
         var empVal = this.getView().byId("empName").getValue();
         oModel.setProperty("/empStr/empName", empVal);
-        console.log("oModel", oModel);
+      },
+      onRowSelect: function (oEvent) {
+        console.log("oEvent", oEvent);
+        this.getView()
+          .byId("isSimpleForm")
+          .bindElement({
+            path: oEvent.getParameter("rowContext").getPath(),
+            model: "empData",
+          });
       },
     });
   }
