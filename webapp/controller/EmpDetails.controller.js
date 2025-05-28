@@ -5,6 +5,8 @@ sap.ui.define(
       onInit: function () {
         var oModel = models.createJSONModel("model/mockData/employee.json");
         sap.ui.getCore().setModel(oModel, "empData");
+        var oModelInter = models.createResourceModel();
+        sap.ui.getCore().setModel(oModelInter, "i18n");
       },
       addDetails: function () {},
       saveDetails: function () {

@@ -1,100 +1,160 @@
-<mvc:View controllerName="atdev.controller.EmpDetails"
+<mvc:View
+    controllerName="atdev.controller.EmpDetails"
     xmlns="sap.m"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
     xmlns:t="sap.ui.table"
-    xmlns:mvc="sap.ui.core.mvc">
+    xmlns:mvc="sap.ui.core.mvc"
+>
     <!-- <Input placeholder="Employee ID" id="empId"/>
     <Input placeholder="Employee Name" id="empName"/>
     <Input placeholder="Employee Salary" id="empSalary"/>
     <Input placeholder="Employee Currency" id="empCurrency"/>
     <Button text="Add Details" press="addDetails" /> -->
 
-    <t:Table title="{= 'Employees'+ ' ' + '('  +  ${empData>/empTab}.length + ')'} " rows="{empData>/empTab}" visibleRowCount="5" selectionMode="Single" width="100%" rowSelectionChange="onRowSelect">
+    <t:Table
+        title="{= '{i18n>XTIT_EMPLOYEE_LIST}'+ ' ' + '('  +  ${empData>/empTab}.length + ')'} "
+        rows="{empData>/empTab}"
+        visibleRowCount="5"
+        selectionMode="Single"
+        width="100%"
+        rowSelectionChange="onRowSelect"
+    >
         <t:columns>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Employee ID"/>
+                    <Label text="{i18n>XFLD_EMPLOYEE_ID}" />
                 </t:label>
                 <t:template>
-                    <Text text="{empData>empId}"/>
+                    <Text text="{empData>empId}" />
                 </t:template>
             </t:Column>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Name"/>
+                    <Label text="Name" />
                 </t:label>
                 <t:template>
-                    <Input value="{empData>empName}"/>
+                    <Input value="{empData>empName}" />
                 </t:template>
             </t:Column>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Salary"/>
+                    <Label text="Salary" />
                 </t:label>
                 <t:template>
-                    <Text text="{= ${empData>salary} + ' ' + ${empData>currency} }" />
+                    <Text
+                        text="{= ${empData>salary} + ' ' + ${empData>currency} }"
+                    />
                 </t:template>
             </t:Column>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Gender"/>
+                    <Label text="Gender" />
                 </t:label>
                 <t:template>
-                    <Image src="{= ${empData>gender} === 'Male' ? 'https://i.pinimg.com/474x/0a/52/d5/0a52d5e52f7b81f96538d6b16ed5dc2b.jpg' : 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png' }" height="32px" width="32px" />
+                    <Image
+                        src="{= ${empData>gender} === 'Male' ? 'https://i.pinimg.com/474x/0a/52/d5/0a52d5e52f7b81f96538d6b16ed5dc2b.jpg' : 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png' }"
+                        height="32px"
+                        width="32px"
+                    />
                 </t:template>
             </t:Column>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Smoker?"/>
+                    <Label text="Smoker?" />
                 </t:label>
                 <t:template>
-                    <Image src="{= ${empData>isSmoker} ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Smoking_Symbol.svg/2048px-Smoking_Symbol.svg.png' : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/No_Smoking.svg/2048px-No_Smoking.svg.png'}" height="32px" width="32px" />
+                    <Image
+                        src="{= ${empData>isSmoker} ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Smoking_Symbol.svg/2048px-Smoking_Symbol.svg.png' : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/No_Smoking.svg/2048px-No_Smoking.svg.png'}"
+                        height="32px"
+                        width="32px"
+                    />
                 </t:template>
             </t:Column>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Marital Status"/>
+                    <Label text="Marital Status" />
                 </t:label>
                 <t:template>
                     <Select selectedKey="{empData>married}">
                         <items>
-                            <core:Item text="Married" key="true"/>
-                            <core:Item text="Unmarried" key="false"/>
+                            <core:Item
+                                text="Married"
+                                key="true"
+                            />
+                            <core:Item
+                                text="Unmarried"
+                                key="false"
+                            />
                         </items>
                     </Select>
                 </t:template>
             </t:Column>
-            <t:Column >
+            <t:Column>
                 <t:label>
-                    <Label text="Rating"/>
+                    <Label text="Rating" />
                 </t:label>
                 <t:template>
-                    <RatingIndicator editable="true" maxValue="5" class="sapUiSmallMarginBottom" value="{empData>rating}" />
+                    <RatingIndicator
+                        editable="true"
+                        maxValue="5"
+                        class="sapUiSmallMarginBottom"
+                        value="{empData>rating}"
+                    />
                 </t:template>
             </t:Column>
         </t:columns>
     </t:Table>
     <!-- Single Emp -->
 
-    <f:SimpleForm editable="true" objectBindings="SimpleForm" id="isSimpleForm">
-        <f:title >
-            <core:Title tooltip="hi" text="Employee Data" icon="sap-icon://customer"/>
-        </f:title >
+    <f:SimpleForm
+        editable="true"
+        objectBindings="SimpleForm"
+        id="isSimpleForm"
+    >
+        <f:title>
+            <core:Title
+                tooltip="hi"
+                text="Employee Data"
+                icon="sap-icon://customer"
+            />
+        </f:title>
         <f:content>
             <Label text="Employee ID" />
-            <Input id="empId" width="50%" value="{empData>empId}"/>
+            <Input
+                id="empId"
+                width="50%"
+                value="{empData>empId}"
+            />
             <Label text="Employee Name" />
-            <Input id="empName" width="50%" value="{empData>empName}"/>
+            <Input
+                id="empName"
+                width="50%"
+                value="{empData>empName}"
+            />
             <Label text="Employee Salary" />
-            <Input id="empSalary" width="50%" value="{empData>salary}"/>
+            <Input
+                id="empSalary"
+                width="50%"
+                value="{empData>salary}"
+            />
             <Label text="Employee Currency" />
-            <Input id="empCurrency" width="50%" value="{empData>currency}"/>
+            <Input
+                id="empCurrency"
+                width="50%"
+                value="{empData>currency}"
+            />
             <Label />
-            <HBox >
-                <Button text="Add Details" press="addDetails" />
-                <Button text="Save" press="saveDetails" />
+            <HBox>
+                <Button
+                    text="Add Details"
+                    press="addDetails"
+                />
+                <Button
+                    text="Save"
+                    press="saveDetails"
+                />
             </HBox>
         </f:content>
     </f:SimpleForm>
-</mvc:View> 
+</mvc:View>
