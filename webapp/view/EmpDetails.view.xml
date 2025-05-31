@@ -34,7 +34,9 @@
                     <Label text="Name" />
                 </t:label>
                 <t:template>
-                    <Input value="{empData>empName}" />
+                    <Input
+                        value="{path:'empData>empName', formatter:'.formatter.upperCaseFunc'}"
+                    />
                 </t:template>
             </t:Column>
             <t:Column>
@@ -43,7 +45,7 @@
                 </t:label>
                 <t:template>
                     <Text
-                        text="{= ${empData>salary} + ' ' + ${empData>currency} }"
+                        text="{parts:[{path:'empData>salary'},{path:'empData>currency'}],formatter:'.formatter.oCurrencyFormat'}"
                     />
                 </t:template>
             </t:Column>

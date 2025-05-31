@@ -1,7 +1,8 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "atdev/model/models"],
-  function (Controller, models) {
+  ["sap/ui/core/mvc/Controller", "atdev/model/models", "atdev/utils/formatter"],
+  function (Controller, models, useFormatter) {
     return Controller.extend("atdev.controller.EmpDetails", {
+      formatter: useFormatter,
       onInit: function () {
         var oModel = models.createJSONModel("model/mockData/employee.json");
         sap.ui.getCore().setModel(oModel, "empData");
